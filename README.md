@@ -38,11 +38,7 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 
 # Circuit Diagram in eSim
 
-![image](https://user-images.githubusercontent.com/111654188/194233346-bcc6ff69-8f89-462e-bdac-a90dd2e5e3ba.png)
-
-# Verilog Code
-
-![image](https://user-images.githubusercontent.com/111654188/194382637-13d26ec0-9035-4d6d-95e3-740e2419f852.png)
+![circuit_preview_page-0001](https://user-images.githubusercontent.com/111654188/209862765-ac2b678e-caca-4a56-9e14-662a84af21c9.jpg)
 
 # Makerchip Verilog code
 
@@ -78,9 +74,12 @@ endmodule
 
 # NgSpice Plots
 
-![image](https://user-images.githubusercontent.com/111654188/194373619-11f1ff78-a4f0-40ba-85fd-cfdbf2e01219.png)
+![image](https://user-images.githubusercontent.com/111654188/209862926-a9b3e9d1-7bf9-4130-af0f-4263a1d5d8d9.png)
 
-![image](https://user-images.githubusercontent.com/111654188/194373726-78fb7ff7-21dc-4f7b-9ff5-852b59732b2f.png)
+![image](https://user-images.githubusercontent.com/111654188/209863021-dcfd7b66-747e-4c98-83ee-be23b3dc7d96.png)
+
+![image](https://user-images.githubusercontent.com/111654188/209863068-0366f96b-d725-4b9e-8936-2524ce597890.png)
+
 
 # Steps to run generate NgVeri Model
 
@@ -103,7 +102,7 @@ endmodule
        cd eSim-Workspace
 3. Clone this project using the following command:
 
-       git clone https://github.com/ashwini0921/Design-of-4-bit-Servo-Tracking-type-ADC.git
+       git clone https://github.com/ashwini0921/Design-of-Delta-sigma-modulator-using-eSim-and-Sky130.git
 4. Run ngspice:
 
         ngspice servo_tracking_ADC1.cir.out
