@@ -124,8 +124,8 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 
 # References
 
-1. Ahmad, Nabihah & Hasan, Rezaul. (2011). A new design of XOR-XNOR gates for low power application. 10.1109/ICEDSA.2011.5959039.
-2. K. Ravali, N. R. Vijay, S. Jaggavarapu and R. Sakthivel, "Low power XOR gate design and its applications," 2017 Fourth International Conference on Signal Processing, Communication and Networking (ICSCN), 2017, pp. 1-4, doi: 10.1109/ICSCN.2017.8085699.
+1. B. Razavi, "The Delta-Sigma Modulator [A Circuit for All Seasons]," in IEEE Solid-State Circuits Magazine, vol. 8, no. 2, pp. 10-15, Spring 2016, doi: 10.1109/MSSC.2016.2543061.
+2. https://github.com/ashwini0921/Design-of-4-bit-Servo-Tracking-type-ADC.git
 3. https://github.com/Eyantra698Sumanto/Two-in-One-Low-power-XOR-XNOR-Gate.git
 4. https://github.com/Eyantra698Sumanto/XOR-XNOR-Gate.git
 5. Linear Integrated Circuit by D ROY CHOUDHURY, SHAIL BALA JAIN
