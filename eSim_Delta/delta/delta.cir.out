@@ -1,0 +1,68 @@
+* g:\delta\delta.cir
+
+.include avsd_opamp.sub
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.lib "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "G:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+x2 vdd vss net-_x1-pad5_ gnd delta_out gnd avsd_opamp
+v6  clk gnd pulse(0 0.8 0 0.0001 0.0001 1.25 2.5)
+* s c m o d e
+v1  net-_v1-pad1_ gnd pulse(0 0.2 0 0.0001 0.0001 6.25 7.5)
+v2  net-_v2-pad1_ net-_v1-pad1_ pulse(0 0.2 1.25 0.0001 0.0001 3.75 7.5)
+v3  in net-_v2-pad1_ pulse(0 0.2 2.5 0.0001 0.0001 1.25 7.5)
+* u1  in plot_v1
+v7 vdd gnd  dc 1
+v8 gnd vss  dc 1
+v9 vrin gnd  dc 2
+x6 vdd vss net-_sc12-pad2_ gnd delay_in gnd avsd_opamp
+xsc12 net-_sc12-pad1_ net-_sc12-pad2_ vrin sky130_fd_pr__res_generic_pd 
+xsc15 net-_sc12-pad2_ delay_in vrin sky130_fd_pr__res_generic_pd 
+xsc13 net-_sc12-pad2_ net-_sc13-pad2_ vrin sky130_fd_pr__res_generic_pd 
+xsc9 net-_sc12-pad1_ net-_sc10-pad1_ vrin sky130_fd_pr__res_generic_pd 
+xsc14 net-_sc13-pad2_ dout1 vrin sky130_fd_pr__res_generic_pd 
+xsc10 net-_sc10-pad1_ dout2 vrin sky130_fd_pr__res_generic_pd 
+xsc8 net-_sc7-pad2_ net-_sc12-pad1_ vrin sky130_fd_pr__res_generic_pd 
+xsc7 gnd net-_sc7-pad2_ vrin sky130_fd_pr__res_generic_pd 
+x3 vdd vss net-_sc5-pad1_ in comp1 gnd avsd_opamp
+x4 vdd vss net-_sc11-pad2_ in comp2 gnd avsd_opamp
+x5 vdd vss net-_sc11-pad1_ in comp3 gnd avsd_opamp
+xsc5 net-_sc5-pad1_ net-_sc5-pad2_ vrin sky130_fd_pr__res_generic_pd 
+xsc6 net-_sc11-pad2_ net-_sc5-pad1_ vrin sky130_fd_pr__res_generic_pd 
+xsc11 net-_sc11-pad1_ net-_sc11-pad2_ vrin sky130_fd_pr__res_generic_pd 
+xsc16 gnd net-_sc11-pad1_ vrin sky130_fd_pr__res_generic_pd 
+* u3  clk comp1 comp2 comp3 gnd net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ adc_bridge_5
+v5 net-_sc5-pad2_ gnd  dc 0.7
+* u2  net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ ashwini_delay1bit
+* u4  net-_u2-pad6_ dout1 dac_bridge_1
+* u8  net-_u2-pad7_ dout2 dac_bridge_1
+* u7  delay_in plot_v1
+* u5  delta_out plot_v1
+x1 vdd vss delay_in in net-_x1-pad5_ gnd avsd_opamp
+a1 [clk comp1 comp2 comp3 gnd ] [net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ ] u3
+a2 [net-_u2-pad1_ ] [net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ ] [net-_u2-pad6_ net-_u2-pad7_ ] u2
+a3 [net-_u2-pad6_ ] [dout1 ] u4
+a4 [net-_u2-pad7_ ] [dout2 ] u8
+* Schematic Name:                             adc_bridge_5, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=0.2 in_high=0.6 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             ashwini_delay1bit, NgSpice Name: ashwini_delay1bit
+.model u2 ashwini_delay1bit(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u4 dac_bridge(out_low=0 out_high=0.8 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u8 dac_bridge(out_low=0 out_high=0.8 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 0.1e-00 50e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(in)
+plot v(delay_in)
+plot v(delta_out)
+.endc
+.end
