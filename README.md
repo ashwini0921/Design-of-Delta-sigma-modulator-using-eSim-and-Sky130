@@ -43,6 +43,7 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 # Makerchip Verilog code
 
   module ashwini_delay1bit(Clk,in,out);
+  
   input Clk;
   input [3 : 0] in;
   output [1 : 0] out;
