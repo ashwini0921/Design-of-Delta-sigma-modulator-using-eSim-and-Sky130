@@ -108,7 +108,7 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 5. To run the project in eSim:
 
 1)  Run eSim
-2)  Load the project named servo_tracking_ADC1
+2)  Load the project named delta
 3)  Open eeSchema
 
 # Acknowlegdements
