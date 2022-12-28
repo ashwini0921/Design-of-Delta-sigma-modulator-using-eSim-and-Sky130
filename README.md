@@ -12,7 +12,7 @@ Delta-sigma modulator is extensively used in digital communication to transfer d
 
 # Circuit Details
 
-The Digital output of analog signal is given by signal Q3(MSB) Q2 Q1 Q0(LSB) for verification of digital output and to compare with input voltage, R-2R DAC is used. If the input voltage is greater than DAC voltage then counter should count-up else count-down. The input signal as well as DAC output is plotted to verify the results.
+The input quantized signal Vin is passed through analog to digital converter. The digital output is passed through ashwini_delay1bit module designed in Makerchip using Verilog code. The ashwini_delay1bit generate a delay of time T in input sampled signal. The delayed output data is passed to digital to analog converter 2 bit R-2R ladder type DAC. The DAC convert the 2 bit data to analog signal which is a delayed Vin i.e. Vin(n-T). The delayed Vin and Vin is passed through subtractor and quantizer which is obtained through the Sky130 avsd_opamp in comparator configuration. The output obtained after passing through comparator is the delta modulated output of Vin.
 
 # Software Used
 
