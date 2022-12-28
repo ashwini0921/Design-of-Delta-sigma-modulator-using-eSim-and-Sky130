@@ -44,70 +44,37 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 
 ![image](https://user-images.githubusercontent.com/111654188/194382637-13d26ec0-9035-4d6d-95e3-740e2419f852.png)
 
-# Makerchip
+# Makerchip Verilog code
 
-    \TLV_version 1d: tl-x.org
-    \SV
-    /* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/ 
-    //Your Verilog/System Verilog Code Starts Here:
-    module ashwini_updown_counter4bit(
-     Clk,
-    UpOrDown,  //Ashwini Kumar up-down counter 1 for up 0 for down
-    Count
-    );
-    
-    input Clk,UpOrDown;
-    output [3 : 0] Count;
-    reg [3 : 0] Count = 0; 
-    
-     always @(posedge(Clk))
-     begin
-            if(UpOrDown == 1)   //Up mode selected
-                if(Count == 15)
-                    Count <= 0;
-                else
-                    Count <= Count + 1; //Incremend Counter
-            else  //Down mode selected
-                if(Count == 0)
-                    Count <= 15;
-                else
-                    Count <= Count - 1; //Decrement counter
-     end       
-     
-    endmodule
-    //Top Module Code Starts here:
+module ashwini_delay1bit(Clk,in,out);
+input Clk;
+input [3 : 0] in;
+output [1 : 0] out;
+reg [1 : 0] out = 0; 
+reg [1 : 0] out_old=0;
+ always @(posedge(Clk) or negedge(Clk))
+ begin
+    out<=out_old;
+        if(in >=8 )
+          out_old<=3;
+       else if(in >=4)
+          out_old<=2;
+       else if(in >=2)
+          out_old<=1;
+       else
+          out_old<=0;
+ end       
+ 
+endmodule
 
-	module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
-		logic  Clk;//input
-		logic  UpOrDown;//input
-		logic  [3 : 0] Count;//output
-    //The $random() can be replaced if user wants to assign values
-		assign Clk = clk;
-		assign UpOrDown = 1'b0; //change it to 1'b1 for up count
-		ashwini_updown_counter4bit ashwini_updown_counter4bit(.Clk(Clk), .UpOrDown(UpOrDown), .Count(Count));
-    \TLV
-    //Add \TLV here if desired                                     
-    \SV
-    endmodule
+# Verilog Plots
 
-
-
-
-# Makerchip Plots
-
-## Up Count
-
-![image](https://user-images.githubusercontent.com/111654188/194245746-8f000f2a-f53b-4c1c-a4e4-2905b97647f4.png)
-
-## Down Count
-
-![image](https://user-images.githubusercontent.com/111654188/194245244-1b68f937-72f8-4f1d-b483-fb76f382fc15.png)
 
 # Netlist
 
-![image](https://user-images.githubusercontent.com/111654188/194375805-48975c66-c75e-4c05-a468-5647711157eb.png)
+![image](https://user-images.githubusercontent.com/111654188/209862361-711f381c-f7cc-4b29-8458-33a76242aaa8.png)
 
-![image](https://user-images.githubusercontent.com/111654188/194375871-3b4f58ec-680a-4cb2-91ca-a8935960fbcf.png)
+![image](https://user-images.githubusercontent.com/111654188/209862447-a46a554e-6ca3-414f-b6d5-2d6e1d15b11c.png)
 
 # NgSpice Plots
 
