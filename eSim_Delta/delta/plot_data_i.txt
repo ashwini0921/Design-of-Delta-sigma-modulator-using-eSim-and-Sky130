@@ -1,5 +1,5 @@
                               * g:\delta\delta.cir
-                              Transient Analysis  Thu Dec 29 00:58:57  2022
+                              Transient Analysis  Thu Dec 29 15:10:54  2022
 --------------------------------------------------------------------------------
 Index   time            a3#branch_1_0   a4#branch_1_0   v1#branch       
 --------------------------------------------------------------------------------
@@ -2378,7 +2378,7 @@ Index   time            a3#branch_1_0   a4#branch_1_0   v1#branch
 2258	5.000000e+01	-1.02338e-03	5.114450e-04	9.853291e-09	
 
                               * g:\delta\delta.cir
-                              Transient Analysis  Thu Dec 29 00:58:57  2022
+                              Transient Analysis  Thu Dec 29 15:10:54  2022
 --------------------------------------------------------------------------------
 Index   time            v2#branch       v3#branch       v5#branch       
 --------------------------------------------------------------------------------
@@ -4757,7 +4757,7 @@ Index   time            v2#branch       v3#branch       v5#branch
 2258	5.000000e+01	9.853291e-09	9.853291e-09	-8.95242e-04	
 
                               * g:\delta\delta.cir
-                              Transient Analysis  Thu Dec 29 00:58:57  2022
+                              Transient Analysis  Thu Dec 29 15:10:54  2022
 --------------------------------------------------------------------------------
 Index   time            v6#branch       v7#branch       v8#branch       
 --------------------------------------------------------------------------------
@@ -7136,7 +7136,7 @@ Index   time            v6#branch       v7#branch       v8#branch
 2258	5.000000e+01	0.000000e+00	1.912171e-07	-2.77504e-07	
 
                               * g:\delta\delta.cir
-                              Transient Analysis  Thu Dec 29 00:58:57  2022
+                              Transient Analysis  Thu Dec 29 15:10:54  2022
 --------------------------------------------------------------------------------
 Index   time            v9#branch       
 --------------------------------------------------------------------------------

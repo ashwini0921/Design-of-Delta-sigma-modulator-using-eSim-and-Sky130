@@ -55,17 +55,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L avsd_opamp X1
-U 1 1 63AA8481
-P 3200 2450
-F 0 "X1" H 3200 2450 60  0000 C CNN
-F 1 "avsd_opamp" H 3250 2350 60  0000 C CNN
-F 2 "" H 3200 2450 60  0001 C CNN
-F 3 "" H 3200 2450 60  0001 C CNN
-	1    3200 2450
-	1    0    0    -1  
-$EndComp
-$Comp
 L avsd_opamp X2
 U 1 1 63AA84DC
 P 5700 2450
@@ -76,58 +65,10 @@ F 3 "" H 5700 2450 60  0001 C CNN
 	1    5700 2450
 	1    0    0    -1  
 $EndComp
-Text GLabel 3200 1950 1    60   Input ~ 0
-Vdd
 Text GLabel 5700 1950 1    60   Input ~ 0
 Vdd
-Text GLabel 3200 3000 3    60   Input ~ 0
-Vss
 Text GLabel 5700 3050 3    60   Input ~ 0
 Vss
-$Comp
-L sky130_fd_pr__res_generic_pd SC1
-U 1 1 63AA85AF
-P 1900 2400
-F 0 "SC1" H 2050 2687 50  0000 C CNN
-F 1 "sky130_fd_pr__res_generic_pd" H 2050 2512 50  0000 R CNN
-F 2 "" H 1900 900 50  0001 C CNN
-F 3 "" H 1900 2400 50  0001 C CNN
-	1    1900 2400
-	0    1    1    0   
-$EndComp
-$Comp
-L sky130_fd_pr__res_generic_pd SC2
-U 1 1 63AA8611
-P 1900 2700
-F 0 "SC2" H 2050 2987 50  0000 C CNN
-F 1 "sky130_fd_pr__res_generic_pd" H 2050 2812 50  0000 R CNN
-F 2 "" H 1900 1200 50  0001 C CNN
-F 3 "" H 1900 2700 50  0001 C CNN
-	1    1900 2700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L sky130_fd_pr__res_generic_pd SC3
-U 1 1 63AA868B
-P 2450 3250
-F 0 "SC3" H 2600 3537 50  0000 C CNN
-F 1 "sky130_fd_pr__res_generic_pd" H 2600 3362 50  0000 R CNN
-F 2 "" H 2450 1750 50  0001 C CNN
-F 3 "" H 2450 3250 50  0001 C CNN
-	1    2450 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L sky130_fd_pr__res_generic_pd SC4
-U 1 1 63AA86F5
-P 2650 1650
-F 0 "SC4" H 2800 1937 50  0000 C CNN
-F 1 "sky130_fd_pr__res_generic_pd" H 2800 1762 50  0000 R CNN
-F 2 "" H 2650 150 50  0001 C CNN
-F 3 "" H 2650 1650 50  0001 C CNN
-	1    2650 1650
-	0    1    1    0   
-$EndComp
 $Comp
 L eSim_GND #PWR01
 U 1 1 63AA945F
@@ -140,21 +81,6 @@ F 3 "" H 5550 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L eSim_GND #PWR02
-U 1 1 63AA9512
-P 3000 3700
-F 0 "#PWR02" H 3000 3450 50  0001 C CNN
-F 1 "eSim_GND" H 3000 3550 50  0000 C CNN
-F 2 "" H 3000 3700 50  0001 C CNN
-F 3 "" H 3000 3700 50  0001 C CNN
-	1    3000 3700
-	1    0    0    -1  
-$EndComp
-Text GLabel 1800 1400 0    60   Input ~ 0
-Vrin
-Text GLabel 2000 3450 3    60   Input ~ 0
-Vrin
-$Comp
 L pulse v6
 U 1 1 63AA941D
 P 4600 3600
@@ -166,10 +92,10 @@ F 3 "" H 4600 3600 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L eSim_GND #PWR03
+L eSim_GND #PWR02
 U 1 1 63AA987D
 P 4100 3600
-F 0 "#PWR03" H 4100 3350 50  0001 C CNN
+F 0 "#PWR02" H 4100 3350 50  0001 C CNN
 F 1 "eSim_GND" H 4100 3450 50  0000 C CNN
 F 2 "" H 4100 3600 50  0001 C CNN
 F 3 "" H 4100 3600 50  0001 C CNN
@@ -221,21 +147,10 @@ F 3 "" H 2250 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L pulse v4
-U 1 1 63AA9D3E
-P 2900 5800
-F 0 "v4" H 2700 5900 60  0000 C CNN
-F 1 "pulse" H 2700 5750 60  0000 C CNN
-F 2 "" H 2600 5800 60  0000 C CNN
-F 3 "" H 2900 5800 60  0000 C CNN
-	1    2900 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L eSim_GND #PWR04
+L eSim_GND #PWR03
 U 1 1 63AA9DF7
 P 1000 6300
-F 0 "#PWR04" H 1000 6050 50  0001 C CNN
+F 0 "#PWR03" H 1000 6050 50  0001 C CNN
 F 1 "eSim_GND" H 1000 6150 50  0000 C CNN
 F 2 "" H 1000 6300 50  0001 C CNN
 F 3 "" H 1000 6300 50  0001 C CNN
@@ -265,10 +180,10 @@ F 3 "" H 5300 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L eSim_GND #PWR05
+L eSim_GND #PWR04
 U 1 1 63AABB4B
 P 5300 2050
-F 0 "#PWR05" H 5300 1800 50  0001 C CNN
+F 0 "#PWR04" H 5300 1800 50  0001 C CNN
 F 1 "eSim_GND" H 5300 1900 50  0000 C CNN
 F 2 "" H 5300 2050 50  0001 C CNN
 F 3 "" H 5300 2050 50  0001 C CNN
@@ -287,10 +202,10 @@ F 3 "" H 6100 1550 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L eSim_GND #PWR06
+L eSim_GND #PWR05
 U 1 1 63AABD44
 P 6100 2050
-F 0 "#PWR06" H 6100 1800 50  0001 C CNN
+F 0 "#PWR05" H 6100 1800 50  0001 C CNN
 F 1 "eSim_GND" H 6100 1900 50  0000 C CNN
 F 2 "" H 6100 2050 50  0001 C CNN
 F 3 "" H 6100 2050 50  0001 C CNN
@@ -309,10 +224,10 @@ F 3 "" H 6700 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L eSim_GND #PWR07
+L eSim_GND #PWR06
 U 1 1 63AABE74
 P 6700 1750
-F 0 "#PWR07" H 6700 1500 50  0001 C CNN
+F 0 "#PWR06" H 6700 1500 50  0001 C CNN
 F 1 "eSim_GND" H 6700 1600 50  0000 C CNN
 F 2 "" H 6700 1750 50  0001 C CNN
 F 3 "" H 6700 1750 50  0001 C CNN
@@ -429,10 +344,10 @@ Vdd
 Text GLabel 9850 2950 3    60   Input ~ 0
 Vss
 $Comp
-L eSim_GND #PWR08
+L eSim_GND #PWR07
 U 1 1 63AC06F5
 P 6650 2400
-F 0 "#PWR08" H 6650 2150 50  0001 C CNN
+F 0 "#PWR07" H 6650 2150 50  0001 C CNN
 F 1 "eSim_GND" H 6650 2250 50  0000 C CNN
 F 2 "" H 6650 2400 50  0001 C CNN
 F 3 "" H 6650 2400 50  0001 C CNN
@@ -440,10 +355,10 @@ F 3 "" H 6650 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L eSim_GND #PWR09
+L eSim_GND #PWR08
 U 1 1 63AC08EA
 P 9250 2600
-F 0 "#PWR09" H 9250 2350 50  0001 C CNN
+F 0 "#PWR08" H 9250 2350 50  0001 C CNN
 F 1 "eSim_GND" H 9250 2450 50  0000 C CNN
 F 2 "" H 9250 2600 50  0001 C CNN
 F 3 "" H 9250 2600 50  0001 C CNN
@@ -451,10 +366,10 @@ F 3 "" H 9250 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L eSim_GND #PWR010
+L eSim_GND #PWR09
 U 1 1 63AC095E
 P 10100 2950
-F 0 "#PWR010" H 10100 2700 50  0001 C CNN
+F 0 "#PWR09" H 10100 2700 50  0001 C CNN
 F 1 "eSim_GND" H 10100 2800 50  0000 C CNN
 F 2 "" H 10100 2950 50  0001 C CNN
 F 3 "" H 10100 2950 50  0001 C CNN
@@ -539,10 +454,10 @@ F 3 "" H 9850 6150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L eSim_GND #PWR011
+L eSim_GND #PWR010
 U 1 1 63AC8E84
 P 10650 5100
-F 0 "#PWR011" H 10650 4850 50  0001 C CNN
+F 0 "#PWR010" H 10650 4850 50  0001 C CNN
 F 1 "eSim_GND" H 10650 4950 50  0000 C CNN
 F 2 "" H 10650 5100 50  0001 C CNN
 F 3 "" H 10650 5100 50  0001 C CNN
@@ -550,10 +465,10 @@ F 3 "" H 10650 5100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L eSim_GND #PWR012
+L eSim_GND #PWR011
 U 1 1 63AC9200
 P 8000 4900
-F 0 "#PWR012" H 8000 4650 50  0001 C CNN
+F 0 "#PWR011" H 8000 4650 50  0001 C CNN
 F 1 "eSim_GND" H 8000 4750 50  0000 C CNN
 F 2 "" H 8000 4900 50  0001 C CNN
 F 3 "" H 8000 4900 50  0001 C CNN
@@ -561,10 +476,10 @@ F 3 "" H 8000 4900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L eSim_GND #PWR013
+L eSim_GND #PWR012
 U 1 1 63AC945D
 P 6250 4900
-F 0 "#PWR013" H 6250 4650 50  0001 C CNN
+F 0 "#PWR012" H 6250 4650 50  0001 C CNN
 F 1 "eSim_GND" H 6250 4750 50  0000 C CNN
 F 2 "" H 6250 4900 50  0001 C CNN
 F 3 "" H 6250 4900 50  0001 C CNN
@@ -590,7 +505,7 @@ Vrin
 Text GLabel 7600 1950 2    60   Input ~ 0
 Vrin
 Text GLabel 6400 2700 2    60   Output ~ 0
-out
+delta_out
 Text GLabel 9500 1550 2    60   Input ~ 0
 Vrin
 Text GLabel 5950 6650 2    60   Input ~ 0
@@ -609,10 +524,10 @@ $EndComp
 Text GLabel 2700 4750 2    60   Output ~ 0
 in
 Text GLabel 1000 2500 2    60   Output ~ 0
-verilog
-Text GLabel 10250 4150 2    60   Output ~ 0
+delay_in
+Text GLabel 10750 4150 2    60   Output ~ 0
 dout2
-Text GLabel 10250 4000 2    60   Output ~ 0
+Text GLabel 10750 4000 2    60   Output ~ 0
 dout1
 Text GLabel 5500 4050 0    60   Output ~ 0
 comp1
@@ -620,39 +535,6 @@ Text GLabel 5500 4200 0    60   Output ~ 0
 comp2
 Text GLabel 5500 4350 0    60   Output ~ 0
 comp3
-$Comp
-L plot_v1 U11
-U 1 1 63AC667E
-P 5250 4100
-F 0 "U11" H 5250 4600 60  0000 C CNN
-F 1 "plot_v1" H 5450 4450 60  0000 C CNN
-F 2 "" H 5250 4100 60  0001 C CNN
-F 3 "" H 5250 4100 60  0000 C CNN
-	1    5250 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L plot_v1 U10
-U 1 1 63AC67E2
-P 5000 4300
-F 0 "U10" H 5000 4800 60  0000 C CNN
-F 1 "plot_v1" H 5200 4650 60  0000 C CNN
-F 2 "" H 5000 4300 60  0001 C CNN
-F 3 "" H 5000 4300 60  0000 C CNN
-	1    5000 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L plot_v1 U9
-U 1 1 63AC688B
-P 4800 4450
-F 0 "U9" H 4800 4950 60  0000 C CNN
-F 1 "plot_v1" H 5000 4800 60  0000 C CNN
-F 2 "" H 4800 4450 60  0001 C CNN
-F 3 "" H 4800 4450 60  0000 C CNN
-	1    4800 4450
-	1    0    0    -1  
-$EndComp
 $Comp
 L DC v5
 U 1 1 63AC9E8D
@@ -665,37 +547,15 @@ F 3 "" H 4150 6000 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L eSim_GND #PWR014
+L eSim_GND #PWR013
 U 1 1 63ACA472
 P 3600 6000
-F 0 "#PWR014" H 3600 5750 50  0001 C CNN
+F 0 "#PWR013" H 3600 5750 50  0001 C CNN
 F 1 "eSim_GND" H 3600 5850 50  0000 C CNN
 F 2 "" H 3600 6000 50  0001 C CNN
 F 3 "" H 3600 6000 50  0001 C CNN
 	1    3600 6000
 	0    1    1    0   
-$EndComp
-$Comp
-L plot_v1 U6
-U 1 1 63ACB061
-P 10250 4000
-F 0 "U6" H 10250 4500 60  0000 C CNN
-F 1 "plot_v1" H 10450 4350 60  0000 C CNN
-F 2 "" H 10250 4000 60  0001 C CNN
-F 3 "" H 10250 4000 60  0000 C CNN
-	1    10250 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L plot_v1 U5
-U 1 1 63ACB1AB
-P 10000 4100
-F 0 "U5" H 10000 4600 60  0000 C CNN
-F 1 "plot_v1" H 10200 4450 60  0000 C CNN
-F 2 "" H 10000 4100 60  0001 C CNN
-F 3 "" H 10000 4100 60  0000 C CNN
-	1    10000 4100
-	1    0    0    -1  
 $EndComp
 $Comp
 L ashwini_delay1bit U2
@@ -708,84 +568,16 @@ F 3 "" H 8300 7900 60  0000 C CNN
 	1    5450 5950
 	1    0    0    -1  
 $EndComp
-$Comp
-L plot_v1 U7
-U 1 1 63AC6104
-P 5750 4000
-F 0 "U7" H 5750 4500 60  0000 C CNN
-F 1 "plot_v1" H 5950 4350 60  0000 C CNN
-F 2 "" H 5750 4000 60  0001 C CNN
-F 3 "" H 5750 4000 60  0000 C CNN
-	1    5750 4000
-	1    0    0    -1  
-$EndComp
 Text GLabel 5550 3700 2    60   Output ~ 0
 clk
-Wire Wire Line
-	1900 2900 1900 3250
-Wire Wire Line
-	1900 3250 2250 3250
-Wire Wire Line
-	2950 1650 4050 1650
-Wire Wire Line
-	4050 1650 4050 2450
-Wire Wire Line
-	4050 2450 3900 2450
 Wire Wire Line
 	5700 2950 5700 3050
 Wire Wire Line
 	5700 2050 5700 1950
 Wire Wire Line
-	3200 1950 3200 2050
-Wire Wire Line
-	2600 2400 2200 2400
-Wire Wire Line
-	2600 2600 2350 2600
-Wire Wire Line
-	2350 2600 2350 2700
-Wire Wire Line
-	2350 2700 2200 2700
-Wire Wire Line
-	2450 2950 2450 2600
-Connection ~ 2450 2600
-Wire Wire Line
-	3450 2950 3450 3650
-Wire Wire Line
-	3450 3650 2450 3650
-Wire Wire Line
-	3200 3000 3200 2950
-Wire Wire Line
-	5100 2600 5050 2600
-Wire Wire Line
-	5050 2600 5050 3350
-Wire Wire Line
-	5050 3350 5950 3350
-Wire Wire Line
 	5950 3350 5950 2950
 Wire Wire Line
-	3000 3700 3000 3650
-Connection ~ 3000 3650
-Wire Wire Line
 	5550 3400 5550 3350
-Connection ~ 5550 3350
-Wire Wire Line
-	5100 2400 4050 2400
-Connection ~ 4050 2400
-Wire Wire Line
-	2350 1650 2300 1650
-Wire Wire Line
-	2300 1650 2300 2400
-Connection ~ 2300 2400
-Wire Wire Line
-	1900 2200 1900 1400
-Wire Wire Line
-	1800 1400 2650 1400
-Wire Wire Line
-	2650 1400 2650 1450
-Connection ~ 1900 1400
-Wire Wire Line
-	2000 3450 2000 3250
-Connection ~ 2000 3250
 Wire Wire Line
 	1000 5350 1000 5250
 Wire Wire Line
@@ -815,15 +607,11 @@ Wire Wire Line
 Wire Wire Line
 	2550 6300 2900 6300
 Wire Wire Line
-	2900 6300 2900 6250
-Wire Wire Line
-	2900 5350 2900 5250
+	2900 6300 2900 5250
 Wire Wire Line
 	2900 5250 3500 5250
 Wire Wire Line
 	1000 6300 1000 6250
-Wire Wire Line
-	900  2400 1600 2400
 Wire Wire Line
 	5300 2050 5300 2000
 Wire Wire Line
@@ -881,8 +669,6 @@ Wire Wire Line
 	9850 1950 9850 2000
 Wire Wire Line
 	850  4900 3700 4900
-Wire Wire Line
-	1600 2700 850  2700
 Wire Wire Line
 	850  2700 850  4900
 Wire Wire Line
@@ -1036,17 +822,9 @@ Wire Wire Line
 	6500 6400 6500 6450
 Connection ~ 6500 6450
 Wire Wire Line
-	10150 4050 10150 3800
-Wire Wire Line
-	10150 3800 7950 3800
-Wire Wire Line
 	7950 3800 7950 3700
 Wire Wire Line
 	8900 3650 8900 3700
-Wire Wire Line
-	8900 3700 10200 3700
-Wire Wire Line
-	10200 3700 10200 4150
 Wire Wire Line
 	7600 4150 7250 4150
 Wire Wire Line
@@ -1091,10 +869,6 @@ Wire Wire Line
 Connection ~ 2600 4900
 Wire Wire Line
 	900  2500 1000 2500
-Connection ~ 900  2400
-Wire Wire Line
-	10250 4000 10150 4000
-Connection ~ 10150 4000
 Wire Wire Line
 	5500 4050 5650 4050
 Connection ~ 5650 4050
@@ -1105,28 +879,7 @@ Wire Wire Line
 	5500 4350 5750 4350
 Connection ~ 5750 4350
 Wire Wire Line
-	5250 3900 5250 3950
-Wire Wire Line
-	5250 3950 5600 3950
-Wire Wire Line
-	5600 3950 5600 4050
-Connection ~ 5600 4050
-Wire Wire Line
-	5000 4100 5000 4150
-Wire Wire Line
-	5000 4150 5600 4150
-Wire Wire Line
-	5600 4150 5600 4200
-Connection ~ 5600 4200
-Wire Wire Line
-	4800 4250 4800 4300
-Wire Wire Line
-	4800 4300 5600 4300
-Wire Wire Line
-	5600 4300 5600 4350
-Connection ~ 5600 4350
-Wire Wire Line
-	6450 2550 6450 2450
+	6450 2550 6450 2400
 Wire Wire Line
 	4600 6000 4700 6000
 Wire Wire Line
@@ -1134,51 +887,148 @@ Wire Wire Line
 Wire Wire Line
 	3700 6000 3600 6000
 Wire Wire Line
-	10250 3800 10200 3800
-Connection ~ 10200 3800
-Wire Wire Line
-	10000 3900 10150 3900
-Connection ~ 10150 3900
-Wire Wire Line
 	5050 3600 5450 3600
 Wire Wire Line
 	5450 3600 5450 3850
 Wire Wire Line
 	5450 3850 5850 3850
 Wire Wire Line
-	5750 3800 5750 3850
-Connection ~ 5750 3850
-Wire Wire Line
 	4150 3600 4100 3600
 Wire Wire Line
 	5450 3700 5550 3700
 Connection ~ 5450 3700
-Wire Wire Line
-	2450 3650 2450 3550
 Wire Wire Line
 	7600 4450 7550 4450
 Wire Wire Line
 	7550 4450 7550 4300
 Wire Wire Line
 	7550 4300 7000 4300
+Wire Wire Line
+	9000 4050 9100 4050
+Wire Wire Line
+	9000 4150 9100 4150
 $Comp
-L dac_bridge_2 U4
-U 1 1 63AD1377
-P 9500 4100
-F 0 "U4" H 9500 4100 60  0000 C CNN
-F 1 "dac_bridge_2" H 9550 4250 60  0000 C CNN
-F 2 "" H 9500 4100 60  0001 C CNN
-F 3 "" H 9500 4100 60  0000 C CNN
-	1    9500 4100
+L dac_bridge_1 U4
+U 1 1 63ACB2EC
+P 9750 4050
+F 0 "U4" H 9750 4050 60  0000 C CNN
+F 1 "dac_bridge_1" H 9750 4200 60  0000 C CNN
+F 2 "" H 9750 4050 60  0000 C CNN
+F 3 "" H 9750 4050 60  0000 C CNN
+	1    9750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L dac_bridge_1 U8
+U 1 1 63ACB39D
+P 9750 4350
+F 0 "U8" H 9750 4350 60  0000 C CNN
+F 1 "dac_bridge_1" H 9750 4500 60  0000 C CNN
+F 2 "" H 9750 4350 60  0000 C CNN
+F 3 "" H 9750 4350 60  0000 C CNN
+	1    9750 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 4050 10050 4050
+	10300 4000 10750 4000
 Wire Wire Line
-	10050 4150 10250 4150
-Connection ~ 10200 4150
+	10300 4300 10500 4300
 Wire Wire Line
-	9050 4050 9000 4050
+	10500 4300 10500 4150
 Wire Wire Line
-	9000 4150 9050 4150
+	10500 4150 10750 4150
+Wire Wire Line
+	9150 4000 9100 4000
+Wire Wire Line
+	9100 4000 9100 4050
+Wire Wire Line
+	9100 4150 9100 4300
+Wire Wire Line
+	9100 4300 9150 4300
+Wire Wire Line
+	8900 3700 10550 3700
+Wire Wire Line
+	10550 3700 10550 4000
+Connection ~ 10550 4000
+Wire Wire Line
+	7950 3800 10350 3800
+Wire Wire Line
+	10350 3800 10350 4300
+Connection ~ 10350 4300
+$Comp
+L plot_v1 U7
+U 1 1 63ACCE48
+P 10850 2450
+F 0 "U7" H 10850 2950 60  0000 C CNN
+F 1 "plot_v1" H 11050 2800 60  0000 C CNN
+F 2 "" H 10850 2450 60  0001 C CNN
+F 3 "" H 10850 2450 60  0000 C CNN
+	1    10850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 2250 10700 2250
+Connection ~ 10700 2250
+$Comp
+L plot_v1 U5
+U 1 1 63ACF54E
+P 6450 2600
+F 0 "U5" H 6450 3100 60  0000 C CNN
+F 1 "plot_v1" H 6650 2950 60  0000 C CNN
+F 2 "" H 6450 2600 60  0001 C CNN
+F 3 "" H 6450 2600 60  0000 C CNN
+	1    6450 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 6450 2450
+Wire Wire Line
+	4850 3350 5950 3350
+$Comp
+L avsd_opamp X1
+U 1 1 63AD3B3C
+P 3400 2400
+F 0 "X1" H 3400 2400 60  0000 C CNN
+F 1 "avsd_opamp" H 3450 2300 60  0000 C CNN
+F 2 "" H 3400 2400 60  0001 C CNN
+F 3 "" H 3400 2400 60  0001 C CNN
+	1    3400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2600 4850 2600
+Wire Wire Line
+	4850 2600 4850 3350
+Connection ~ 5550 3350
+Wire Wire Line
+	5100 2400 4100 2400
+Wire Wire Line
+	2800 2350 900  2350
+Connection ~ 900  2350
+Wire Wire Line
+	2800 2550 1600 2550
+Wire Wire Line
+	1600 2550 1600 2700
+Wire Wire Line
+	1600 2700 850  2700
+Text GLabel 3400 1950 1    60   Input ~ 0
+Vdd
+Text GLabel 3400 2950 3    60   Input ~ 0
+Vss
+$Comp
+L eSim_GND #PWR014
+U 1 1 63AD4413
+P 3650 2950
+F 0 "#PWR014" H 3650 2700 50  0001 C CNN
+F 1 "eSim_GND" H 3650 2800 50  0000 C CNN
+F 2 "" H 3650 2950 50  0001 C CNN
+F 3 "" H 3650 2950 50  0001 C CNN
+	1    3650 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1950 3400 2000
+Wire Wire Line
+	3400 2900 3400 2950
+Wire Wire Line
+	3650 2900 3650 2950
 $EndSCHEMATC
