@@ -64,6 +64,7 @@ It is a tool which converts Verilog code to C++ objects. Refer: https://www.veri
 
 # Verilog Plots
 
+![image](https://user-images.githubusercontent.com/111654188/209903852-ccf1a3ea-ef30-4b22-81a0-a65b7ac15748.png)
 
 # Netlist
 
